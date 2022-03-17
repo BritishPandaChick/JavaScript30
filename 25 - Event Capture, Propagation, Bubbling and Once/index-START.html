@@ -5,7 +5,6 @@
   <title>Understanding JavaScript's Capture</title>
 </head>
 <body class="bod">
-
   <div class="one">
     <div class="two">
       <div class="three">
@@ -17,6 +16,7 @@
   html {
     box-sizing: border-box;
   }
+
   *, *:before, *:after { box-sizing: inherit; }
 
   div {
@@ -38,6 +38,7 @@
 </style>
 
 <button></button>
+
 <script>
 	const divs = document.querySelectorall('div');
 	const button = document.querySelector('button');
@@ -59,8 +60,7 @@
 		console.log('click');
 	}, {
 		once: true
-	}
-	
+	});
 </script>
 </body>
 </html>

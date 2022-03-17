@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="wrapper">
     <video class="flex" width="765" height="430" src="https://www.dropbox.com/s/nf6jfkwck1glsyo/12%20-%20flex-wrapping-and-columns.mp4?dl=1" loop controls></video>
     <div class="speed">
@@ -14,25 +13,23 @@
     </div>
   </div>
 
-<script>
-	const speed = document.querySelector('.speed');
-	const bar = speed.querySelector('.speed-bar');
-	const video = document.querySelector('.flex');
-	
-	speed.addEventListener('mousemove', function(e) {
-		const y = e.pageY - this.offsetTop;
-		const percent = y / this.offsetHeight;
-		const min = 0.4;
-		const max = 4;
-		const height = Math.round(percent * 100) + '%';
-		const playbackRate = percent * (max - min) + min;
-		bar.style.height = height;
-		bar.textContent = playbackRate.toFixed(2) + 'x';
-		video.playbackRate = playbackRate;
+	<script>
+		const speed = document.querySelector('.speed');
+		const bar = speed.querySelector('.speed-bar');
+		const video = document.querySelector('.flex');
 		
-		
-		//console.log(percent);
-	});
-</script>
+		speed.addEventListener('mousemove', function(e) {
+			const y = e.pageY - this.offsetTop;
+			const percent = y / this.offsetHeight;
+			const min = 0.4;
+			const max = 4;
+			const height = Math.round(percent * 100) + '%';
+			const playbackRate = percent * (max - min) + min;
+			bar.style.height = height;
+			bar.textContent = playbackRate.toFixed(2) + 'x';
+			video.playbackRate = playbackRate;
+			//console.log(percent);
+		});
+	</script>
 </body>
 </html>

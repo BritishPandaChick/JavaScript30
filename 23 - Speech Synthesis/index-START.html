@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="voiceinator">
 
       <h1>The Voiceinator 5000</h1>
@@ -25,7 +24,6 @@
       <textarea name="text">Hello! I love JavaScript 👍</textarea>
       <button id="stop">Stop!</button>
       <button id="speak">Speak</button>
-
     </div>
 
 <script>
@@ -38,12 +36,12 @@
   msg.text = document.querySelector('[name="text"]').value;
   
   function populateVoices(){
-	voices = this.getVoices();
-	//console.log(voices);
-	voicesDropdown.innerHTML = voices
-		.filter(voice => voice.lang.includes('en'));
-		.map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
-		.join('');
+    voices = this.getVoices();
+    //console.log(voices);
+    voicesDropdown.innerHTML = voices
+      .filter(voice => voice.lang.includes('en'))
+      .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
+      .join('');
   }
   
   function setVoice() {

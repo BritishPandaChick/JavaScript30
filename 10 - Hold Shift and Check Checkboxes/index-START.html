@@ -6,7 +6,6 @@
 </head>
 <body>
   <style>
-
     html {
       font-family: sans-serif;
       background:#ffc600;
@@ -29,7 +28,6 @@
     .item:last-child {
       border-bottom:0;
     }
-
 
     input:checked + p {
       background:#F9F9F9;
@@ -117,7 +115,7 @@
             //loop over every single checkbox 
             checkboxes.forEach(checkbox => {
               console.log(checkbox);
-                if(checkbox === this) || checkbox === lastChecked) {
+                if(checkbox === this || checkbox === lastChecked) {
                     inBetween = !inBetween;
                     console.log('Starting to check them inbetween!');
                 }
